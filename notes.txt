@@ -1,0 +1,25 @@
+Setting up Enviroment
+========================
+Step 1: Install Babel CLI Globally
+npm install babel-cli -g
+
+OR 
+Install Babel CLI Locally
+npm install babel-cli
+
+Step 2:Install below package to convert ES6(ES-2015) code to ES5
+ npm install babel-preset-es2015
+
+ Step 3: Create new file with extension .babelrc with below configuration
+
+ {
+    "presets": [
+        "es2015"
+     ]
+}
+
+Step 4: Transpile(convert) ES6 file(app.js) to ES5 code file(transpileApp.js)
+ babel app.js --out-file transpiledApp.js
+
+Step 5:Automatic transpiling using watch command (this will Automatically transpile our ES6 file to ES5 file)
+app.js --watch  --out-file transpiledApp.js
