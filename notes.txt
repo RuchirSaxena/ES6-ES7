@@ -23,3 +23,53 @@ Step 4: Transpile(convert) ES6 file(app.js) to ES5 code file(transpileApp.js)
 
 Step 5:Automatic transpiling using watch command (this will Automatically transpile our ES6 file to ES5 file)
 app.js --watch  --out-file transpiledApp.js
+
+Note:The above manual setup is okay for small project but we should use a build tool for enterspise level applications , below we are using Webpack as a build tool for doing above task .
+
+Using Webpack To Automate above manual task
+==============================================
+
+Step 1: npm init 
+Create package.json file for the project 
+
+Step 2: npm install webpack --save-dev 
+To install Webpack as a dev dependency
+
+Step 3: npm install webpack-cli -g
+To install Webpack-cli as a global dependency
+
+Step 4: npm install babel-loader --save-dev
+To install babel as a dev dependency
+
+ Step 5: npm install babel-preset-es2015 --save-dev
+ To install babel-preset-es2015 as a dev dependency
+
+ Step 6:Create webpack.config.js with below configuration
+ module.export={
+    entry:'./index.js',
+    output:{
+        filename:'bundle.js'
+    },
+    module:{
+        loaders:[
+            {
+                test:/.\js?/,
+                loader:'babel-loader',
+                exclude:/node_modules/
+            }
+        ]
+    }
+}
+
+Step 7: Create src folder and place your source js file(index.js) indside it
+we can write our ES6 syntax inside it , which will later be tranpiled to ES5 syntax 
+
+Note : We need to create src folder and insde it index.js as with webpack 4 its how the configuration is read by default
+
+Step 8: Run command => webpack
+the above command will create a new folder by the name dist in root directory and  inside it main.js
+which will contains webpack configuration code alond with Transpiled ES5 syntax(minified) , this is the only file needed to be included on our index.html page 
+
+
+
+
