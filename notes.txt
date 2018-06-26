@@ -70,6 +70,9 @@ Step 8: Run command => webpack
 the above command will create a new folder by the name dist in root directory and  inside it main.js
 which will contains webpack configuration code alond with Transpiled ES5 syntax(minified) , this is the only file needed to be included on our index.html page 
 
+Step 9:  Run command => webpack -w
+the -w flag will help it to transpile it Automatically to es5 code when there are any changes to to our src/index.js file 
+
 
 
 
