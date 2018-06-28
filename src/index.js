@@ -11,7 +11,7 @@ const sayHello = (name) => {
 const sayHello1 = name => alert(`Hello ${name}`);
 
 
-sayHello1("Ruchir");
+//sayHello1("Ruchir");
 
 //Arrow function  =>this keyword usage
 
@@ -38,7 +38,21 @@ const user = {
     }
 };
 
-user.printPlacesLived();
+
+
+//user.printPlacesLived();
+
+//Another Example
+const multipler={
+    numbers:[2,3,4,5],
+    multiplerNo:2,
+    getMutiplierResult(){
+      return  this.numbers.map(no=> no * this.multiplerNo);
+    
+    }
+}
+
+console.log(multipler.getMutiplierResult());
 
 
 
