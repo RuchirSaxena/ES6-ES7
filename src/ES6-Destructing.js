@@ -81,7 +81,7 @@ let { USD, AUS, MEX } = convertCurrency(1);
 
 console.log(USD, AUS, MEX);
 
-function tipCal({ total=100, tip = 0.15, tax = 0.13 } = {}) {
+function tipCal({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
     return total + (tip * total) + (tax * total);
 }
 
