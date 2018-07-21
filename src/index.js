@@ -1,88 +1,27 @@
-//Excersice 1
-//Get numbers above 70 
-const numbers =[,3,4,6,9,6,3,2,6,44,67,99,33,22,6,6,89,90];
+//New string methods introduced in javascript
+const course ='RFB2';
 
-let numsGreaterThan70= numbers.filter((num)=>{
-    return num>70;
-});
+const flightNumber= '20-AC2018-jz';
+const accountNumer='82524344376RT0001';
 
-console.log(numsGreaterThan70);
+const make='BMW';
+const model ='x5';
+const colour ='Royal Blue';
 
-//Excersice 2
+console.log(flightNumber.startsWith('20'));
 
-/*
-<ul>
-    <li data-time="5:17">Flexbox Video</li>
-    <li data-time="8:22">Flexbox Video</li>
-    <li data-time="3:34">Redux Video</li>
-    <li data-time="5:23">Flexbox Video</li>
-    <li data-time="7:12">Flexbox Video</li>
-    <li data-time="7:24">Redux Video</li>
-    <li data-time="6:46">Flexbox Video</li>
-    <li data-time="4:45">Flexbox Video</li>
-    <li data-time="4:40">Flexbox Video</li>
-    <li data-time="7:58">Redux Video</li>
-    <li data-time="11:51">Flexbox Video</li>
-    <li data-time="9:13">Flexbox Video</li>
-    <li data-time="5:50">Flexbox Video</li>
-    <li data-time="5:52">Redux Video</li>
-    <li data-time="5:49">Flexbox Video</li>
-    <li data-time="8:57">Flexbox Video</li>
-    <li data-time="11:29">Flexbox Video</li>
-    <li data-time="3:07">Flexbox Video</li>
-    <li data-time="5:59">Redux Video</li>
-    <li data-time="3:31">Flexbox Video</li>
-</ul>
+console.log(accountNumer.endsWith(001));
 
+console.log(flightNumber.startsWith('AC',3));
 
-1. Select all the list items on the page and convert to array
-  2. Filter for only the elements that contain the word 'flexbox'
-  3. map down to a list of time strings
-  4. map to an array of seconds
-  5. reduce to get total
-  OR 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
-*/
+console.log(flightNumber.endsWith('jz'));
 
+console.log(accountNumer.endsWith('RT',13));
 
-var items = document.querySelectorAll("[data-time]");
-debugger;
-console.log(items.length);
+console.log(make.repeat(10));
 
-const videoTimimgs=[];
-items.forEach((item)=>{
-    if (item.innerHTML ==="Flexbox Video"){
-        videoTimimgs.push(item.getAttribute("data-time"));
-    }
-})
- let totalCOurseTime= videoTimimgs.map((time)=>{
-        return time.replace(":",".");
-        
- });
+function leftPad(str,length=10) {
+    return `${' '.repeat(length - str.length)}${str}`;
+}
 
- let totaltime=0;
-totalCOurseTime.forEach((item)=>{
-   totaltime += parseFloat(item); 
-});
-console.log(totaltime.toFixed(2));
-
-//OR Below is an another new smplified approach
-
-
-var items =Array.from( document.querySelectorAll("[data-time]"));
-const result= items.filter((item)=>{
-    return item.innerHTML.includes("Flexbox")
-}).
-map((item)=>{
-    return item.dataset.time;
-}).
-map((item)=>{
-    return item.replace(':','.');
-}).
-map((item)=>{
-    return parseFloat(item);
-}).
-reduce((item1,item2 )=>{
-  return  (item1+item2);
-},0);
-console.log(result.toFixed(2));
-
+console.log(leftPad(make));
