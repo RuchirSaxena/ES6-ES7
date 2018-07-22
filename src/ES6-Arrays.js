@@ -60,8 +60,8 @@ console.log(beerIndex);
 //some
 const ages = [10, 23, 56, 33, 45];
 
-console.log(ages.some(age => age>18));
+console.log(ages.some(age => age > 18));
 
 //every
-console.log(ages.every(age=>age>19));
+console.log(ages.every(age => age > 19));
 
