@@ -95,7 +95,7 @@ const runner = ['ruchir saxena', 123, 3.4, 3.4, 4.5, 5.6, 4.5];
 
 let [name, id, ...runs] = runner;
 
-console.log(name,id,runs);
+console.log(name, id, runs);
 
 
 
