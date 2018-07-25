@@ -77,7 +77,7 @@ function convertCurrency(amount) {
     return convert;
 }
 
-let { USD, AUS, MEX } = convertCurrency(1);
+let { USD, AUS, MEX } = convertCurrency(100);
 
 console.log(USD, AUS, MEX);
 

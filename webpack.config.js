@@ -11,5 +11,9 @@ module.export={
                 exclude:/node_modules/
             }
         ]
+    },
+    optimization: {
+        // We no not want to minimize our code.
+        minimize: false
     }
 }

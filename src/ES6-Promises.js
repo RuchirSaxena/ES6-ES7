@@ -107,7 +107,7 @@ getInventorDetails('Johannes')
 //Calling multiple promises simultaneously 
 
 const weather = new Promise((resolve, reject) => {
-   
+
     setTimeout(() => {
         resolve({ temp: 29, conditions: "ranniy" });
     }, 2000);
