@@ -6,7 +6,7 @@ function* listPersons() {
     yield 'Developer';
 }
 
-const people=listPersons();
+const people = listPersons();
 
 console.log(people.next());
 console.log(people.next());
@@ -22,12 +22,12 @@ const inventors = [
     { first: 'Max', last: 'Planck', year: 1858 },
 ];
 
-function*  loop(arr) {
-    for(let item of arr ){
+function* loop(arr) {
+    for (let item of arr) {
         yield item;
     }
 }
 
-const inventorsGenerator=loop(inventors);
+const inventorsGenerator = loop(inventors);
 
 console.log(inventorsGenerator.next().value);
